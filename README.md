@@ -2,7 +2,8 @@
 INTRO:
 
 	Sparkfun provides libraries for the CAN-BUS Arduino shield that allows querying for standard diagnostic information
-	using the OBD-II specification. In addition, each vehicle has its own unique CAN bus protcol (https://en.wikipedia.org/wiki/CAN_bus). This project is dedicated to identifying and decoding this traffic. 
+	using the OBD-II specification. In addition, each vehicle has its own unique CAN bus protcol
+	(https://en.wikipedia.org/wiki/CAN_bus). This project is dedicated to identifying and decoding this traffic. 
 	The Mazda 3 will be the example used, but the process should be readily adapted to other vehicles. 
 
 	A number of Electronic Control Units (ECU) communicate on the bus. Each message will contain an 

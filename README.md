@@ -1,8 +1,8 @@
 # canBuster
 INTRO:
 
-	Sparkfun provides libraries for the CAN-BUS Arduino shield that allows querying for standard diagnostic information
-	using the OBD-II specification. In addition, each vehicle has its own unique CAN bus protcol
+	Sparkfun provides libraries for the CAN-BUS Arduino shield that allows querying for standard diagnostic 
+	information using the OBD-II specification. In addition, each vehicle has its own unique CAN bus protcol
 	(https://en.wikipedia.org/wiki/CAN_bus). This project is dedicated to identifying and decoding this traffic. 
 	The Mazda 3 will be the example used, but the process should be readily adapted to other vehicles. 
 
@@ -19,8 +19,8 @@ INTRO:
 		Time, State, ID, D0,D1,D2,D3,D4,D5,D6,D7
 
 	and is easily uploaded as a CSV file. One runs a correlation between each data column and the  state variable. 
-	One one sees the highest value one looks thru the various Arbitration IDs to identify the one that appears to be 
-	the driver of the calculation.
+	One one sees the highest value one looks thru the various Arbitration IDs to identify the one that appears 
+	to be the driver of the calculation.
 	
 
 	

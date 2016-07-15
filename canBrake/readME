@@ -1,0 +1,22 @@
+This program will identify Arbitration IDs associated with Braking
+
+Usage:
+  In this folder create a folder lib
+  Add libSparkFun to this folder
+  Compile program
+  Upload to Arduino
+  Connect to OBD-II Connector
+  Open Terminal. 
+  Start car
+  Follow prompts to depress and release brake. Repeat several times
+  Turn off car
+  Down load LOG.TXT from the BRAKE folder on sd card
+  Load file into LibreOffice Calc
+  Add teh following header row:
+    Time, state,AID, D0,D1,D2,D3,D4,D5,D6,D7
+  Create pivot table as follows:
+    ROW_FIELD     AID
+    COLUM_FIELDS  state
+    FIELDS        Mean-D0,Mean-D1,Mean-D2,Mean-D3,Mean-D4,Mean-D5,Mean-D6,Mean-D7
+    
+Idenify the AIDs that have the bigg diferences for one or my Bytes between the two states.    

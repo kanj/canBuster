@@ -13,17 +13,19 @@ INTRO:
 	By presenting different stimuli, e.g. alternating pressing and releasing the brake, and recording 
 	the CAN bus traffic, one can identify the Arbitration ID and data byte(s) associated with the brake ECU.  
 	Once one identifies the Arbitration ID for braking, one can filter this out from the bus traffic when looking 
-	for the Arbitration ID associated with steering.
-	
-	The data analysis can be done using Libre Office spreadsheet. The data is logged in the following format:
-		Time, State, ID, D0,D1,D2,D3,D4,D5,D6,D7
-
-	and is easily uploaded as a CSV file. One runs a correlation between each data column and the  state variable. 
-	One one sees the highest value one looks thru the various Arbitration IDs to identify the one that appears 
-	to be the driver of the calculation.
-	
-
+	for the Arbitration ID associated with steering. The data analysis can be done using Libre Office spreadsheet. 
 	
 USAGE:
 
+	You will need the following hardware:
+		Arduino Uno
+		CAN_BUS-SHILED
+		micro SD Card (FAT Format)
+		OBD-II to 9 pin serial cable
+	You will need teh following Softare
+		Arduino IDE or INO to compile
+		If using INO you will need PicoComm 
+		Libre Office
+		
+	Download or clone the repository. 
 	

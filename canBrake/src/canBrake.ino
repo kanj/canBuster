@@ -77,16 +77,24 @@ void setup()
     return;
   }
   Serial.println("card initialized.");
-  
+  SD.mkdir("BRAKE");
+  File dataFile = SD.open("BRAKE/LOG.TXT", FILE_WRITE);  //Create directory
+  dataFile.println("Time, state, AID, D0,D1,D2,D3,D4,D5,D6,D7");
+  dataFile.close();
   if(Canbus.init(CANSPEED_500))  /* Initialise MCP2515 CAN controller at the specified speed */
   {
     Serial.println("CAN Init ok");
   } else
   {
     Serial.println("Can't init CAN");
+    // don't do anything more:
+    return;
   } 
-   
-  delay(1000); 
+  while (!mcp2515_check_message()){ 
+    delay(100);
+  }  
+  Serial.println("CAN traffic detected");
+  delay(5000); 
 }
 
 void loop()

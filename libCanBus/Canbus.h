@@ -17,7 +17,7 @@
 #define CANSPEED_250  	3		// CAN speed at 250 kbps
 #define CANSPEED_500	1		// CAN speed at 500 kbps
 
-
+#define ENGINE_LOAD         0x04
 #define ENGINE_COOLANT_TEMP 0x05
 #define ENGINE_RPM          0x0C
 #define VEHICLE_SPEED       0x0D

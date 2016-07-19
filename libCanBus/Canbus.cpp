@@ -128,6 +128,12 @@ char CanbusClass::ecu_req(unsigned char pid,  char *buffer)
 					{
 							switch(message.data[2])
 								{   /* Details from http://en.wikipedia.org/wiki/OBD-II_PIDs */
+									
+									case ENGINE_LOAD:				// Throttle Position
+									engine_data = (message.data[3]*100)/255;
+									sprintf(buffer,"%d %% ",(int) engine_data);
+									break;
+																	
 									case ENGINE_RPM:  			//   ((A*256)+B)/4    [RPM]
 									engine_data =  ((message.data[3]*256) + message.data[4])/4;
 									sprintf(buffer,"%d rpm ",(int) engine_data);

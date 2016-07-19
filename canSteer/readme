@@ -1,0 +1,32 @@
+This program will identify Arbitration IDs associated with steering
+
+Usage:
+  Compile and Upload
+    In this folder create a folder lib
+    Add libSparkFun to this folder
+    Add libMakeModel, or equivalent, to this folder
+    Compile program
+    Upload to Arduino
+  Run Program:
+    Connect to OBD-II Connector to car
+    Open Terminal. You should see teh following:
+        Initializing SD card...
+        CAN Init ok
+    Start car
+    Connect serial connector to shield
+    You should see the following in the terminal:
+      CAN traffic detected
+    
+    Follow prompts to "Move steering wheel" and "Keep steering wheel steady". Repeat several times
+    Remove serial connector from shield
+    Turn off car
+  Analyze Data:  
+    Down load LOG.TXT from the STEER folder on sd card
+    Load file into LibreOffice Calc
+    Create pivot table as follows:
+      ROW_FIELD     AID
+      COLUM_FIELDS  state
+      FIELDS        Mean-D0,Mean-D1,Mean-D2,Mean-D3,Mean-D4,Mean-D5,Mean-D6,Mean-D7
+    
+      Idenify the AIDs that have the biggest diferences for one or more Bytes between the two states.   
+      An example output and analysis is given in teh extras folder.

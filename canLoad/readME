@@ -1,0 +1,31 @@
+This program will identify Arbitration IDs associated with Engine Load
+
+Usage:
+  Compile and Upload
+    In this folder create a folder lib
+    Add libSparkFun to this folder
+    Add libMakeModel, or equivalent, to this folder
+    Compile program
+    Upload to Arduino
+  Run Program:
+    Connect to OBD-II Connector to car
+    Open Terminal. You should see the following:
+        Initializing SD card...
+        CAN Init ok
+    Start car
+    Connect serial connector to shield
+    You should see the following in the terminal:
+      CAN traffic detected
+    
+    You should be prompted to "Rev engine higher and lower"
+    Do this for 30 or so seconds.
+    Remove serial connector from shield
+    Turn off car
+  Analyze Data:  
+    Down load LOG.TXT from the LOAD folder on sd card
+    Load file into LibreOffice Calc
+    Create a column that converts the ENGINE_LOAD string into a numeric value
+    Create a separate sheet for each AID of interest.
+    Compute correlation between data byte and teh ENGINE_LOAD
+    See the extras folder for an example
+        
